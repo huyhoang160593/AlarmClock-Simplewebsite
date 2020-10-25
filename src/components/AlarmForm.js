@@ -60,7 +60,7 @@ const AlarmForm = ({ createAlarm, modifyAlarm }) =>{
                     />
                 </div>
                 <div>
-                    <label htmlFor="time">Time</label>      
+                    <label htmlFor="time">Giờ báo thức</label>      
                     <input
                         id="time"
                         type="time"
@@ -71,7 +71,7 @@ const AlarmForm = ({ createAlarm, modifyAlarm }) =>{
                     />
                 </div>
                 <div>
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">Tin nhắn</label>
                     <textarea
                         id="message"
                         type="text"
@@ -95,7 +95,7 @@ const AlarmForm = ({ createAlarm, modifyAlarm }) =>{
                     <span className="rules">*Yêu cầu code tối đa 4 kí tự bất kì</span>
                 </div>
                 <div>
-                    <label htmlFor="timetoexpire">Time to Expire</label>
+                    <label htmlFor="timetoexpire">Thời gian tự hủy</label>
                     <div>
                         <input
                             id="timetoexpire"
