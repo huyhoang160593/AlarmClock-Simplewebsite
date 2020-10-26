@@ -7,18 +7,24 @@ const AlarmManagerScreen = () =>{
     const [modifyAlarm, setModifyAlarm] = useState({})
 
     const addAlarm = (alarmObject) => {
-        !alarmObject.id 
+        const sameCodeAlarm = alarms.find(alarm => alarmObject.code === alarm.code)
+        if(!sameCodeAlarm){
+            !alarmObject.id 
         ?   AlarmService.create(alarmObject)
             .then( returnAlarm => {
                 setAlarms(alarms.concat(returnAlarm))
             })
         :   AlarmService.update(alarmObject.id, alarmObject)
-        .then( returnAlarm => {
-            setAlarms(alarms.map(alarm => {
-                return alarm.id === returnAlarm.id ? returnAlarm : alarm
-            }
-                ))
-        })
+                .then( returnAlarm => {
+                    setAlarms(alarms.map(alarm => {
+                        return alarm.id === returnAlarm.id ? returnAlarm : alarm
+                    }
+                        ))
+                })
+        } else {
+            alert("Đoạn code này đã bị trùng, mời bạn nhập lại code khác !")
+        }
+        
 
     }
 

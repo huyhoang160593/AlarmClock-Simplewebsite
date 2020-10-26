@@ -23,7 +23,7 @@ function App() {
   return (
       <div className="App grid-container">
         <header className="App-header">
-          <h1>Share your anonymous thought for everyone to see...</h1>
+          <h1 className="line-1 anim-typewriter">Share your anonymous thought for everyone to see...</h1>
         </header>
         <main className="main">
           <form onSubmit={handleClick} className="keyword-bar">
@@ -32,6 +32,7 @@ function App() {
               name="keyword-input" 
               id="keyword-input" 
               onChange= {({ target }) => setKeyword(target.value)}
+              placeholder="Giàu vì bạn, sang vì vợ..."
             />
             <button type="submit"> Send </button>
           </form>
