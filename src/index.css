@@ -7,6 +7,23 @@
   -moz-osx-font-smoothing: grayscale;
 } */
 
+:root {
+  --color-background: #31037D;
+  --axis-x: 1px;
+  --axis-y: 1rem;
+  --delay: 10;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-orange: #D49C3D;
+  --color-red: #D14B3D;
+  --color-violet: #CF52EB;
+  --color-blue: #44A3F7;
+  --color-green: #5ACB3C;
+  --color-yellow: #DEBF40;
+  --color-foreground: var(--color-white);
+  --font-name: Righteous;
+}
+
 html{
   font-size: 62.5%;
   box-sizing: border-box;
@@ -40,7 +57,7 @@ animation: typewriter 4s steps(44) 1s 1 normal both,
 }
 @keyframes typewriter{
 from{width: 0;}
-to{width: 21.7em;}
+to{width: 25.5em;}
 }
 @keyframes blinkTextCursor{
 from{border-right-color: rgba(255,255,255,.75);}
@@ -330,3 +347,32 @@ button:hover span {
   color: purple;
   font-size: 3rem;
 }
+
+/* Useless Screen */
+.useless-shit{
+  text-align: center;
+}
+
+.heart {
+	font-size: 20rem;
+	color: purple;
+	animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+.useless-shit h1{
+  font-size: 7rem;
+}
+
+/* Useless text animation */
+
+.useless-shit h1{
+  font-size: 8rem;
+  font-family: 'Dancing Script', cursive;
+}
+
